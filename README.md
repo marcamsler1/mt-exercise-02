@@ -49,9 +49,13 @@ Generate (sample) some text from a trained model with:
 
     ./scripts/generate.sh
 
-To plot the log files, run:
+We also made some changes to the /tools/pytorch-examples/word language model/main.py file. It now takes an additional parameter logfile, which logs the train and validation perplexities for each epoch and logs them in a file in the subfolder /logs.
+
+To plot the generated log files, run:
 
     python scripts/plot_data.py logs/*.txt
+
+This creates two plots. The first one visualizes the train perplexities and their corresponding epochs for the different dropout rates, while the second one does the same for the validation perplexities.
 
 Additional information:
 
