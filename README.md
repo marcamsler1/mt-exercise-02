@@ -55,7 +55,10 @@ This script only contains some minor adjustments, so it receives the correct dat
 # Additional change to log the perplexities during training
 
 We also made some changes to the /tools/pytorch-examples/word language model/main.py file. It now takes an additional parameter logfile, which logs the train and validation perplexities for each epoch and logs them in a file in the subfolder /logs.
-Important! This file is now in the scripts folder, but it has to be moved to the exact loaction as above (/tools/pytorch-examples/word language model/main.py) to generate the log files during training.
+
+Important! This file is now in the scripts folder, but it has to be moved to this exact loaction before the training starts in order to generate the log files.
+
+    /tools/pytorch-examples/word language model/main.py
 
 To plot the generated log files, run:
 
