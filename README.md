@@ -31,6 +31,10 @@ Download and preprocess data:
 
     ./scripts/download_data.sh
 
+Note:
+We made a small modification to download_data.sh because the wget command didn't work on our system (Windows with Git Bash).
+Instead of wget, we used curl to download the dataset.  
+
 Train a model:
 
     ./scripts/train.sh
