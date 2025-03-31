@@ -43,7 +43,7 @@ Train a model:
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
 
 Note:
-We adjusted this file so that it trains models with five different dropout rates (0, 0.3, 0.4, 0.5, 0.6). It uses the previously downloaded Frankenstein data set for training the models.
+We adjusted this file so that it trains models with five different dropout rates (0, 0.3, 0.4, 0.5, 0.6). It uses the previously downloaded Frankenstein data set for training the models, which is required for exercise 2.
 
 Generate (sample) some text from a trained model with:
 
@@ -55,7 +55,7 @@ To plot the log files, run:
 
 Additional information:
 
-    We misunderstood the part of the exercise to create tables for each of the perplexities and instead created a "table" for each of the different dropout rates. The plots are still created correctly, but the process to create the plots is     different from the instructions in the assignment.
+    We misunderstood the part of the exercise to create tables for each of the perplexities and instead created a "table" for each of the different dropout rates. The plots are still created correctly, but the process to create the plots is different from the instructions in the assignment. The first row of the log files (one for each dropout rate) contains the train perplexities for each epoch, while the second row contains the validation perplexities. Finally, the last row starts with "Test" and contains the test perplexity.
 
 
 
