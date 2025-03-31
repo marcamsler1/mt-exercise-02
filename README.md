@@ -52,11 +52,11 @@ Generate (sample) some text from a trained model with:
 
 This script only contains some minor adjustments, so it receives the correct data and model to generate the text and stores the generated text in the correct folder.
 
-# Additional change to log the perplexities during training
+# Additional changes to log the perplexities during training
 
 We also made some changes to the /tools/pytorch-examples/word language model/main.py file. It now takes an additional parameter logfile, which logs the train and validation perplexities for each epoch and logs them in a file in the subfolder /logs.
 
-Important! This file is now in the scripts folder, but it has to be moved to this exact loaction before the training starts in order to generate the log files.
+**Important!** This file is now in the scripts folder, but it has to be moved to this exact loaction before the training starts in order to generate the log files.
 
     /tools/pytorch-examples/word language model/main.py
 
