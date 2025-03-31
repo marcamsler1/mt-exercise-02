@@ -14,7 +14,7 @@ This repo shows how to train neural language models using [Pytorch example code]
 
 Clone this repository in the desired place:
 
-    git clone https://github.com/marpng/mt-exercise-02
+    git clone https://github.com/marcamsler1/mt-exercise-02
     cd mt-exercise-02
 
 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
@@ -31,14 +31,37 @@ Download and preprocess data:
 
     ./scripts/download_data.sh
 
+Note:
+We made a small modification to download_data.sh because the wget command didn't work on our system (Windows with Git Bash).
+Instead of wget, we used curl to download the dataset.
+We also adjusted this file to download the text of the book "Frankenstein" from the Project Gutenberg website and preprocess it.
+
 Train a model:
 
     ./scripts/train.sh
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
 
+Note:
+We adjusted this file so that it trains models with five different dropout rates (0, 0.3, 0.4, 0.5, 0.6). It uses the previously downloaded Frankenstein data set for training the models, which is required for exercise 2.
+
 Generate (sample) some text from a trained model with:
 
     ./scripts/generate.sh
+
+We also made some changes to the /tools/pytorch-examples/word language model/main.py file. It now takes an additional parameter logfile, which logs the train and validation perplexities for each epoch and logs them in a file in the subfolder /logs.
+
+To plot the generated log files, run:
+
+    python scripts/plot_data.py logs/*.txt
+
+This creates two plots. The first one visualizes the train perplexities and their corresponding epochs for the different dropout rates, while the second one does the same for the validation perplexities.
+
+Additional information:
+
+We misunderstood the part of the exercise to create tables for each of the perplexities and instead created a "table" for each of the different dropout rates. The plots are still created correctly, but the process to create the plots is different from the instructions in the assignment. The first row of the log files (one for each dropout rate) contains the train perplexities for each epoch, while the second row contains the validation perplexities. Finally, the last row starts with "Test" and contains the test perplexity.
+
+
+
 
 
