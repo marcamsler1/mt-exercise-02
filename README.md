@@ -14,7 +14,7 @@ This repo shows how to train neural language models using [Pytorch example code]
 
 Clone this repository in the desired place:
 
-    git clone https://github.com/marpng/mt-exercise-02
+    git clone https://github.com/marcamsler1/mt-exercise-02
     cd mt-exercise-02
 
 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
@@ -40,5 +40,16 @@ The training process can be interrupted at any time, and the best checkpoint wil
 Generate (sample) some text from a trained model with:
 
     ./scripts/generate.sh
+
+To plot the log files, run:
+
+    python scripts/plot_data.py logs/*.txt
+
+Additional information:
+
+    We misunderstood the part of the exercise to create tables for each of the perplexities and instead created a "table" for each of the different dropout rates. The plots are still created correctly, but the process to create the plots is     different from the instructions in the assignment.
+
+
+
 
 
