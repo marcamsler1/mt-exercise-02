@@ -33,13 +33,17 @@ Download and preprocess data:
 
 Note:
 We made a small modification to download_data.sh because the wget command didn't work on our system (Windows with Git Bash).
-Instead of wget, we used curl to download the dataset.  
+Instead of wget, we used curl to download the dataset.
+We also adjusted this file to download the text of the book "Frankenstein" from the Project Gutenberg website and preprocess it.
 
 Train a model:
 
     ./scripts/train.sh
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
+
+Note:
+We adjusted this file so that it trains models with five different dropout rates (0, 0.3, 0.4, 0.5, 0.6). It uses the previously downloaded Frankenstein data set for training the models.
 
 Generate (sample) some text from a trained model with:
 
