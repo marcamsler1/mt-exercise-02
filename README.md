@@ -52,7 +52,7 @@ Generate (sample) some text from a trained model with:
 
 This script only contains some minor adjustments, so it receives the correct data and model to generate the text and stores the generated text in the correct folder.
 
-# Additional changes
+# Additional change to log the perplexities during training
 
 We also made some changes to the /tools/pytorch-examples/word language model/main.py file. It now takes an additional parameter logfile, which logs the train and validation perplexities for each epoch and logs them in a file in the subfolder /logs.
 Important! This file is now in the scripts folder, but it has to be moved to the exact loaction as above (/tools/pytorch-examples/word language model/main.py) to generate the log files during training.
@@ -63,7 +63,7 @@ To plot the generated log files, run:
 
 This creates two plots. The first one visualizes the train perplexities and their corresponding epochs for the different dropout rates, while the second one does the same for the validation perplexities.
 
-Additional information:
+# Additional information:
 
 We misunderstood the part of the exercise to create tables for each of the perplexities and instead created a "table" for each of the different dropout rates. The plots are still created correctly, but the process to create the plots is different from the instructions in the assignment. The first row of the log files (one file for each dropout rate) contains the train perplexities for each epoch, while the second row contains the validation perplexities. Finally, the last row starts with "Test" and contains the test perplexity.
 
