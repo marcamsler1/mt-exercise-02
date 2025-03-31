@@ -34,7 +34,8 @@ Download and preprocess data:
 Note:
 We made a small modification to download_data.sh because the wget command didn't work on our system (Windows with Git Bash).
 Instead of wget, we used curl to download the dataset.
-We also adjusted this file to download the text of the book "Frankenstein" from the Project Gutenberg website and preprocess it. We also adjusted the part where the data is split into three sets, because our own data set had more lines and we wanted to make use of the entire data set.
+
+We also adjusted this file to download the text of the book "Frankenstein" from the Project Gutenberg website and preprocess it. The part where the data is split into three sets is adjusted as well, because our own data set had more lines and we wanted to make use of the entire data set.
 
 Train a model:
 
@@ -54,7 +55,7 @@ This script only contains some minor adjustments, so it receives the correct dat
 # Additional changes
 
 We also made some changes to the /tools/pytorch-examples/word language model/main.py file. It now takes an additional parameter logfile, which logs the train and validation perplexities for each epoch and logs them in a file in the subfolder /logs.
-Important! To correctly generate the log files, this script has to be in the exact same location as 
+Important! This file is now in the scripts folder, but it has to be moved to the exact loaction as above (/tools/pytorch-examples/word language model/main.py) to generate the log files during training.
 
 To plot the generated log files, run:
 
