@@ -31,10 +31,6 @@ mv 52521-0.txt $data/grimm/raw/tales.txt
 
 cat $data/grimm/raw/tales.txt | python $base/scripts/preprocess_raw.py > $data/grimm/raw/tales.cleaned.txt
 
-# download required nltk resources
-
-python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab')"
-
 # tokenize, fix vocabulary upper bound
 
 cat $data/grimm/raw/tales.cleaned.txt | python $base/scripts/preprocess.py --vocab-size 5000 --tokenize --lang "en" --sent-tokenize > \
