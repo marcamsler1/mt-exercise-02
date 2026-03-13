@@ -8,7 +8,8 @@ mkdir -p $tools
 
 echo "Make sure this script is executed AFTER you have activated a virtualenv"
 
-pip install numpy torch sacremoses nltk
+pip install numpy sacremoses nltk
+pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
 
 # install Moses scripts for preprocessing
 
